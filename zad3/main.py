@@ -21,3 +21,4 @@ result = chomik(fn)
 print(f"{n}")
 for seq in result:
     print(seq)
+#1
