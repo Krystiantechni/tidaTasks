@@ -17,7 +17,7 @@ def chomik(n):
 
 
 n = 5
-result = chomik(fn)
+result = chomik(n)
 print(f"{n}")
 for seq in result:
     print(seq)
