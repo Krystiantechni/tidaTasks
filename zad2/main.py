@@ -13,3 +13,21 @@ def kot(numbers):
     
     for i, num in enumerate(numbers):
         current_sum += num
+        
+        if current_sum > max_sum:
+            max_sum = current_sum
+            start = current_start
+            max_length = i - current_start + 1
+        elif current_sum == max_sum and (i - current_start + 1) > max_length:
+            start = current_start
+            max_length = i - current_start + 1
+        
+        if current_sum < 0:
+            current_sum = 0
+            current_start = i + 1
+    
+    return numbers[start:start + max_length]
+
+
+test2 = [2, -4, 6, 8, -10, 100, -6, 5]
+print(kot(test2))
